@@ -140,7 +140,7 @@ html, body {
 /*--Home Section--*/
 .home {
   position: relative;
-  height: 80vh;
+  height: 70vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -148,6 +148,7 @@ html, body {
   padding: 0 5%;
   color: white;
   z-index: 0;
+  margin-top: 0;
 }
 
 .home::before {
@@ -265,7 +266,7 @@ html, body {
 }
 
 .process-section span {
-  color: blue;
+  color: #007bff;
   font-weight: 800;
   font-size: 1rem;
   font-family: Arial;
@@ -357,11 +358,8 @@ html, body {
 
 .about-us {
   margin-top: 100px;
+  margin-bottom: 100px;
   padding: 40px 5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px
 }
 
 .about-us .heading {
@@ -436,7 +434,7 @@ html, body {
 
 .block-1 {
   left: 10%;
-  top: 33rem;
+  top: 29rem;
 }
 
 .block-2 {
@@ -444,10 +442,53 @@ html, body {
   bottom: 2rem;
 }
 
+@media (max-width: 974px) {
+  .block-1,
+  .block-2 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  .block-1 {
+    top: 20px;
+    left: 20px;
+  }
+
+  .block-2 {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .inner-container-1,
+  .inner-container-2 {
+    position: relative; /* so the blocks can layer behind */
+    z-index: 1;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: flex-start; /* change if you want top alignment */
+  justify-content: space-between;
+  gap: 40px; /* optional */
+  flex-wrap: wrap; /* helps on smaller screens */
+}
+
+.container-1,
+.container-2 {
+  flex: 1;
+  min-width: 300px; /* avoids overly squishing on small viewports */
+}
+
+
 .container-1{
   display: flex;
   margin: auto 0;
   gap: 30px;
+  max-width: 50%;
 }
 
 .container-2 {
@@ -456,13 +497,14 @@ html, body {
   justify-content: flex-start;
   align-items: flex-start;
   margin: auto 0;
+  max-width: 50%;
 }
 
 .inner-container-1, .inner-container-2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 30%;
+  width: 35%;
   position: relative;
   z-index: 2;
   gap: 10px;
@@ -660,15 +702,6 @@ html, body {
   pointer-events: none;
 }
 
-
-
-.services-content {
-  position: relative;
-  z-index: 2; /* stays above both video and overlay */
-  color: white;
-}
-
-
 .services-content span {
   background: white;
   color: #051787;
@@ -682,6 +715,184 @@ html, body {
 .services-content h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 900;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+
+.services-content {
+  padding: 60px 5%;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+
+.section-label {
+  color: #548ca1;
+  font-weight: 800;
+  font-size: 1rem;
+  background: white;
+  border: 1px solid #fff;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  color: #252525;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.left-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-item {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); /* Safari support */
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.service-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.service-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-item i {
+  font-size: 2rem;
+  color: #0c0ca7;
+  margin-bottom: 10px;
+}
+
+.service-item h3 {
+  font-size: 1.2rem;
+  color: #252525;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.right-content {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.right-content img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #0c0ca7;
+  color: white;
+  padding: 12px 24px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0a0a95;
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding-top: 20px;
+    padding-inline: 4%;
+  }
+
+  .services-content {
+    padding: 40px 4%;
+  }
+
+  .services-content h1 {
+    font-size: 2rem;
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .left-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .service-item {
+    text-align: center;
+    padding: 16px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .service-item i {
+    font-size: 1.8rem;
+  }
+
+  .right-content {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .right-content img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cta-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
 }
 
 
@@ -694,7 +905,6 @@ footer {
 
 /* Container */
 .foot {
-  margin-top: 100px;
   padding: 80px 10%;
   background: rgb(45, 45, 218);
   color: #efefef;
