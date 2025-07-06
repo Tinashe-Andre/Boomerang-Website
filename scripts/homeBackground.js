@@ -1,23 +1,27 @@
-  const images = [
+const slideImages = [
     'images/home-bg.jpeg',
     'images/home-bg-2.jpg',
     'images/home-bg-3.jpg'
   ];
 
-  let current = 0;
-  const homeSection = document.querySelector('.home');
+  let currentIndex = 0;
+
+  const slides = document.querySelectorAll('.bg-slide');
+  let currentSlide = slides[0];
+  let nextSlide = slides[1];
 
   function switchBackground() {
-    current = (current + 1) % images.length;
-    homeSection.style.setProperty('--bg-img', `url('${images[current]}')`);
-    homeSection.style.backgroundImage = `url('${images[current]}')`;
+    currentIndex = (currentIndex + 1) % slideImages.length;
+
+    // Update the background of the "next" slide
+    nextSlide.style.backgroundImage = `url('${slideImages[currentIndex]}')`;
+
+    // Trigger fade effect
+    nextSlide.classList.add('current');
+    currentSlide.classList.remove('current');
+
+    // Swap slide references
+    [currentSlide, nextSlide] = [nextSlide, currentSlide];
   }
 
-  // Optional: Also change the ::after layer
-  function switchAfterBackground() {
-    homeSection.classList.add('sliding');
-    document.querySelector('.home::after'); // doesn't work in JS
-  }
-
-  setInterval(switchBackground, 3500); // change every 5 seconds
-
+  setInterval(switchBackground, 4000);

@@ -139,20 +139,15 @@ html, body {
 
 /*--Home Section--*/
 .home {
-    position: relative;
-    height: 80vh;
-    background: url('../images/home-bg.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 5%;
-    color: white;
-    z-index: 0;
-    overflow: hidden;
-    transition: background-image 1s ease-in-out;
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 5%;
+  color: white;
+  z-index: 0;
 }
 
 .home::before {
@@ -163,15 +158,32 @@ html, body {
     z-index: 0;
 }
 
-.home::after {
-  content: "";
+/* Layer that holds both background slides */
+.home-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Individual background slides */
+.bg-slide {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;
-  transition: background 1s ease-in-out;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Active slide is visible */
+.bg-slide.current {
+  opacity: 1;
+  z-index: 1;
+}
+
+.bg-slide.next {
+  z-index: 0;
 }
 
 
