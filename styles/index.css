@@ -630,6 +630,12 @@ html, body {
   padding-top: 40px;
   padding-inline: 5%;
   text-align: center;
+
+  /*Fallback background */
+  background-image: url('../images/services-fallback.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .video-bg {
@@ -653,6 +659,16 @@ html, body {
   z-index: 1;
   pointer-events: none; /* ✅ This makes it "see-through" to the video */
 }
+
+.video-bg {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.video-bg.ready {
+  opacity: 1;
+}
+
 
 .services-content {
   position: relative;

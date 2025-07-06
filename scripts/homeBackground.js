@@ -1,3 +1,4 @@
+//switches the background image every 4 seconds
 const slideImages = [
     'images/home-bg.jpeg',
     'images/home-bg-2.jpg',
