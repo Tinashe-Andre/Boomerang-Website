@@ -17,9 +17,9 @@
                     <a href="index.html" onclick="closeMenu()">Home</a>
                     <a href="about.html" onclick="closeMenu()">About Us</a>
                     <a href="services.html" onclick="closeMenu()">Services</a>
-                    <a href="#" onclick="closeMenu()">Gallery</a>
-                    <a href="#" onclick="closeMenu()">Contact Us</a>
-                    <a href="#" class="deco" onclick="closeMenu()">Book Now</a>
+                    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+                    <a href="contact.html" onclick="closeMenu()">Contact Us</a>
+                    <a href="https://wa.me/27792296578" target="_blank" class="deco" onclick="closeMenu()">Book Now</a>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
@@ -39,7 +39,7 @@
             <div class="overlay-heading">
                 <h1>Your way to<br>freedom</h1>
                 <div class="overlay-text">
-                    <a href="#" class="home-cta">Start Learning Today</a>
+                    <a href="contact.html" class="home-cta">Start Learning Today</a>
                 </div>
             </div>
         </section>
@@ -153,10 +153,24 @@
     </div>
     <div class="right-content">
       <img src="images/services-img.jpg" alt="Services Image">
-      <a href="#" class="cta-button">Discover More</a>
+      <a href="services.html" class="cta-button">Discover More</a>
     </div>
   </div>
 </div>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+  <!-- Scroll to Top -->
+  <button class="circle-btn" id="scrollTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/27792296578" class="circle-btn whatsapp-btn" title="Chat on WhatsApp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
 
         </section>
 
@@ -200,6 +214,7 @@
         <script src="scripts/hamburgerMenu.js"></script>
         <script src="scripts/homeBackground.js"></script>
         <script src="scripts/servicesVideo.js"></script>
+        <script src="scripts/floatingActionButton.js"></script>
         <script>
   const items = document.querySelectorAll('.service-item');
   const observer = new IntersectionObserver((entries) => {

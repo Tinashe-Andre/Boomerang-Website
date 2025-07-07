@@ -8,7 +8,6 @@ html, body {
   overflow-x: hidden;
   font-family: Arial, sans-serif;
   width: 100%;
-  background: #f8f9fa;
   color: #222;
   position: relative;
 }
@@ -137,7 +136,7 @@ html, body {
     }
 }
 
-/* Home Section Layout */
+/*--Home Section--*/
 .home {
   position: relative;
   height: 70vh;
@@ -153,7 +152,7 @@ html, body {
 .home-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../images/services-bg.jpg');
+  background-image: url('../images/gallery-bg.jpg');
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -190,15 +189,16 @@ html, body {
   }
 }
 
-/*--Services Section--*/
-.services-section {
-  margin-top: 0;
-  padding: 40px 5%;
+/*Gallery */
+
+.gallery-section {
+  padding: 60px 5%;
+  background-color: #cadee4;
   text-align: center;
-  background-color: #b8d6f5;
+  
 }
 
-.services-section .heading {
+.gallery-section span {
   color: #007bff;
   font-weight: 800;
   font-size: 1rem;
@@ -211,300 +211,118 @@ html, body {
   margin-bottom: 20px;
 }
 
-.services-section h1 {
+.gallery-section h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 40px;
 }
 
-.price-block {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 32px; /* space between the cards */
-    margin-top: 32px;
-    flex-wrap: wrap;
+
+/* Masonry style gallery */
+.masonry-gallery {
+  column-count: 3;
+  column-gap: 16px;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
-.price-card {
-    width: 350px;
-    min-height: 480px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    background-color: #fff;
-    padding: 28px 24px 24px 24px;
-    box-shadow: 0 4px 24px rgba(44,204,113,0.13);
-    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    border: 2px solid grey;
+.gallery-item {
+  margin-bottom: 16px;
+  break-inside: avoid;
+  cursor: pointer;
 }
 
-@media (max-width: 974px) {
-  .price-card {
-    width: 90%;
-    min-height: auto;
-    padding: 20px 16px;
-    gap: 12px;
+.gallery-item img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.02);
+}
+
+/* Modal Styling */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.caption {
+  color: #f1f1f1;
+  text-align: center;
+  padding: 16px;
+  font-size: 1.1rem;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  font-size: 3rem;
+  padding: 12px;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+  z-index: 10000;
+}
+
+.nav-btn.left {
+  left: 20px;
+}
+
+.nav-btn.right {
+  right: 20px;
+}
+
+.counter {
+  color: #ccc;
+  font-size: 1rem;
+  padding: 10px;
+  text-align: center;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+
+  .close-btn {
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
   }
 }
-
-
-.price-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 16px 40px #014288;
-    border: 2px solid #007bff;
-    z-index: 2;
-}
-
-.price-card .icon-circle {
-    width: 70px;
-    height: 70px;
-    background: #007bff;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(43, 31, 202, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
-    transition: transform 0.2s;
-}
-
-.price-card:hover .icon-circle {
-    transform: translateY(-8px);
-}
-
-.price-card .icon-circle img {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    display: block;
-}
-
-.price-card .title {
-    font-size: 1.3rem;
-    color: #000;
-    font-weight: 700;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-.price-card .price {
-    font-size: 2rem;
-    color: #000;
-    font-weight: 700;
-    margin: 0 0 2px 0;
-}
-
-.price-card .per {
-    font-size: 1rem;
-    color: #888;
-    font-weight: 400;
-}
-
-.price-card .desc {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #b0b0b0;
-    margin-bottom: 8px;
-    margin-top: 0;
-    line-height: 1.5;
-}
-
-.price-card .features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 10px 0;
-}
-
-.price-card .features li {
-    font-size: 1.05rem;
-    color: #007bff;
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-}
-
-#icon {
-    color: #fff;
-    font-size: 2em;
-}
-
-.price-card .features i  {
-    color: #007bff;
-    margin-right: 10px;
-    font-size: 1.1em;
-}
-
-.price-btn {
-    background-color: rgb(89, 177, 168);
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
-    padding: 12px 28px;
-    border-radius: 30px;
-    display: inline-block;
-    margin-top: 10px;
-    transition: background 0.2s, color 0.2s;
-    text-align: center;
-}
-
-.price-card:hover .price-btn,
-.price-btn:hover {
-    background-color: #007bff;
-    color: #fff;
-}
-
-/*--Bundle Section--*/
-
-.bundle-section {
-  margin-top: 60px;
-  padding: 40px 5%;
-  background-color: #f0f4f8;
-  border-radius: 20px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
-  max-width: 1200px;
-  margin-inline: auto;
-}
-
-.bundle-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
-}
-
-.bundle-heading {
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 32px;
-  color: #014288;
-}
-
-.bundle-card {
-  background: white;
-   border: 1px solid #ccc;
-  border-radius: 14px;
-  padding: 24px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  border-left: 6px solid #38bac4;
-}
-
-.bundle-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-  color: #014288;
-}
-
-.bundle-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.bundle-card ul li {
-  padding: 6px 0;
-  font-size: 1rem;
-  color: #333;
-  position: relative;
-  padding-left: 22px;
-}
-
-.bundle-card ul li::before {
-  content: "\f05d"; /* FontAwesome bullet icon (fa-circle-dot) */
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  position: absolute;
-  left: 0;
-  top: 6px;
-  color: #38bac4;
-  font-size: 0.75rem;
-}
-
-.bundle-note {
-  background-color: #e9f5ff;
-  border: 1px solid #ccc;
-  border-left: 6px solid #007bff;
-  padding: 20px;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  color: #333;
-  margin-top: 40px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-}
-
-/*--Additonal Section--*/
-
-.additional-section {
-  margin-top: 40px;
-  padding: 40px 5%;
-  text-align: center;
-  background-color: #b8d6f5;
-}
-
-.additional-section .heading {
-  color: #007bff;
-  font-weight: 800;
-  font-size: 1rem;
-  font-family: Arial;
-  border: 1px solid #fff;
-  background-color: white;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  padding: 5px 10px;
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-.additional-section h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 40px;
-}
-
-.service-list {
-  list-style: none;
-  padding: 0;
-  margin: 40px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  max-width: 900px;
-}
-
-.service-list li {
-  background: #fff;
-  padding: 14px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #333;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.service-list li i {
-  font-size: 1.3rem;
-  color: #007bff;
-  flex-shrink: 0;
-}
-
-.service-list li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0, 123, 255, 0.15);
-}
-
 
 
 /*--Footer Section--*/
@@ -674,4 +492,3 @@ form button:hover {
 .whatsapp-btn:hover {
   background: #1ebe5d;
 }
-

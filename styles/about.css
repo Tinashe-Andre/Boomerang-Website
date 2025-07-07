@@ -150,7 +150,7 @@ html, body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 60, 130, 0.3);
     z-index: 0;
 }
 
@@ -186,11 +186,10 @@ html, body {
 /* Text container */
 /* Updated container for more transparency */
 .overlay-text {
- 
   padding: 30px 40px;
   border-radius: 16px;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(0);
+
 }
 
 /* h1 – Bigger, bold, white */
@@ -204,7 +203,7 @@ html, body {
 /* h2 – Smaller, accent color */
 .overlay-text h2 {
   font-size: clamp(1.4rem, 4vw, 2rem);
-  color: #38bac4;
+  color: #fff;
   font-weight: 600;
   margin-bottom: 30px; /* creates spacing above CTA */
 }
@@ -229,6 +228,7 @@ html, body {
   background: #f4f4f4;
   padding: 60px 20px;
   font-family: 'Segoe UI', sans-serif;
+  background-color: #b8d6f5;
 }
 
 .container-2 {
@@ -740,4 +740,44 @@ form button:hover {
   .dev {
     font-size: 0.9rem;
   }
+}
+
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 1000;
+}
+
+.circle-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #007bff;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.circle-btn:hover {
+  background: #005bb5;
+  transform: scale(1.05);
+}
+
+.whatsapp-btn {
+  background: #25d366;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
 }

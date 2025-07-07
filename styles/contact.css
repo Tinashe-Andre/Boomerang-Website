@@ -153,9 +153,9 @@ html, body {
 .home-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../images/services-bg.jpg');
+  background-image: url('../images/contact-bg.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   z-index: 0;
 }
 
@@ -190,15 +190,16 @@ html, body {
   }
 }
 
-/*--Services Section--*/
-.services-section {
-  margin-top: 0;
-  padding: 40px 5%;
+/*--Contact Section--*/
+.contact-section {
+  padding: 80px 5%;
+  background: #f8f9fb;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
   text-align: center;
-  background-color: #b8d6f5;
 }
 
-.services-section .heading {
+.contact-section span {
   color: #007bff;
   font-weight: 800;
   font-size: 1rem;
@@ -211,300 +212,117 @@ html, body {
   margin-bottom: 20px;
 }
 
-.services-section h1 {
+.contact-section h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 40px;
 }
 
-.price-block {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 32px; /* space between the cards */
-    margin-top: 32px;
-    flex-wrap: wrap;
-}
-
-.price-card {
-    width: 350px;
-    min-height: 480px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    background-color: #fff;
-    padding: 28px 24px 24px 24px;
-    box-shadow: 0 4px 24px rgba(44,204,113,0.13);
-    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    border: 2px solid grey;
-}
-
-@media (max-width: 974px) {
-  .price-card {
-    width: 90%;
-    min-height: auto;
-    padding: 20px 16px;
-    gap: 12px;
-  }
-}
-
-
-.price-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 16px 40px #014288;
-    border: 2px solid #007bff;
-    z-index: 2;
-}
-
-.price-card .icon-circle {
-    width: 70px;
-    height: 70px;
-    background: #007bff;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(43, 31, 202, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
-    transition: transform 0.2s;
-}
-
-.price-card:hover .icon-circle {
-    transform: translateY(-8px);
-}
-
-.price-card .icon-circle img {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    display: block;
-}
-
-.price-card .title {
-    font-size: 1.3rem;
-    color: #000;
-    font-weight: 700;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-.price-card .price {
-    font-size: 2rem;
-    color: #000;
-    font-weight: 700;
-    margin: 0 0 2px 0;
-}
-
-.price-card .per {
-    font-size: 1rem;
-    color: #888;
-    font-weight: 400;
-}
-
-.price-card .desc {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #b0b0b0;
-    margin-bottom: 8px;
-    margin-top: 0;
-    line-height: 1.5;
-}
-
-.price-card .features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 10px 0;
-}
-
-.price-card .features li {
-    font-size: 1.05rem;
-    color: #007bff;
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-}
-
-#icon {
-    color: #fff;
-    font-size: 2em;
-}
-
-.price-card .features i  {
-    color: #007bff;
-    margin-right: 10px;
-    font-size: 1.1em;
-}
-
-.price-btn {
-    background-color: rgb(89, 177, 168);
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
-    padding: 12px 28px;
-    border-radius: 30px;
-    display: inline-block;
-    margin-top: 10px;
-    transition: background 0.2s, color 0.2s;
-    text-align: center;
-}
-
-.price-card:hover .price-btn,
-.price-btn:hover {
-    background-color: #007bff;
-    color: #fff;
-}
-
-/*--Bundle Section--*/
-
-.bundle-section {
-  margin-top: 60px;
-  padding: 40px 5%;
-  background-color: #f0f4f8;
-  border-radius: 20px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
   max-width: 1200px;
-  margin-inline: auto;
+  margin: 0 auto;
 }
 
-.bundle-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
+.contact-info,
+.contact-form {
+  flex: 1 1 400px;
+  padding: 40px;
 }
 
-.bundle-heading {
+.contact-info {
+  background: #007bff;
+  color: white;
+}
+
+.contact-info h2 {
   font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 32px;
-  color: #014288;
+  margin-bottom: 20px;
 }
 
-.bundle-card {
-  background: white;
-   border: 1px solid #ccc;
-  border-radius: 14px;
-  padding: 24px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  border-left: 6px solid #38bac4;
-}
-
-.bundle-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-  color: #014288;
-}
-
-.bundle-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.bundle-card ul li {
-  padding: 6px 0;
-  font-size: 1rem;
-  color: #333;
-  position: relative;
-  padding-left: 22px;
-}
-
-.bundle-card ul li::before {
-  content: "\f05d"; /* FontAwesome bullet icon (fa-circle-dot) */
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  position: absolute;
-  left: 0;
-  top: 6px;
-  color: #38bac4;
-  font-size: 0.75rem;
-}
-
-.bundle-note {
-  background-color: #e9f5ff;
-  border: 1px solid #ccc;
-  border-left: 6px solid #007bff;
-  padding: 20px;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  color: #333;
-  margin-top: 40px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+.contact-info p {
+  margin-bottom: 30px;
   line-height: 1.6;
 }
 
-/*--Additonal Section--*/
-
-.additional-section {
-  margin-top: 40px;
-  padding: 40px 5%;
-  text-align: center;
-  background-color: #b8d6f5;
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
 }
 
-.additional-section .heading {
-  color: #007bff;
-  font-weight: 800;
+.info-list li {
+  margin-bottom: 12px;
   font-size: 1rem;
-  font-family: Arial;
-  border: 1px solid #fff;
-  background-color: white;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  padding: 5px 10px;
+}
+
+.info-list i {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.social-icons a {
   display: inline-block;
+  margin-right: 12px;
+  font-size: 2rem;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  color: #e0e0e0;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.additional-section h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 40px;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
 }
 
-.service-list {
-  list-style: none;
-  padding: 0;
-  margin: 40px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  max-width: 900px;
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.service-list li {
-  background: #fff;
-  padding: 14px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #333;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.contact-form button:hover {
+  background: #005bb5;
 }
 
-.service-list li i {
-  font-size: 1.3rem;
-  color: #007bff;
-  flex-shrink: 0;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
 
-.service-list li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0, 123, 255, 0.15);
+  .contact-info,
+  .contact-form {
+    padding: 30px 20px;
+  }
 }
-
 
 
 /*--Footer Section--*/
@@ -532,7 +350,7 @@ footer {
 
 /* Icons */
 footer i {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 16px;
 }
 
@@ -674,4 +492,6 @@ form button:hover {
 .whatsapp-btn:hover {
   background: #1ebe5d;
 }
+
+
 
