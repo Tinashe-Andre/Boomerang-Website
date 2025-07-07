@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Services</title>
+        <link rel="stylesheet" href="styles/services.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="icon" href="images/boomerang-logo-icon-removebg.png">
+    </head>
+    <body>
+        <!--Navigation Header-->
+        <section class="nav">
+            <div class="top-nav">
+                <a href="index.html"><img src="images/boomerang-logo.png" alt="Logo"></a>
+                <div id="nav-links">
+                    <a href="index.html" onclick="closeMenu()">Home</a>
+                    <a href="about.html" onclick="closeMenu()">About Us</a>
+                    <a href="services.html" onclick="closeMenu()">Services</a>
+                    <a href="#" onclick="closeMenu()">Gallery</a>
+                    <a href="#" onclick="closeMenu()">Contact Us</a>
+                    <a href="#" class="deco" onclick="closeMenu()">Book Now</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </section>
+
+        <!--Home Section-->
+        <section class="home">
+            <!-- Background transition layers -->
+            <div class="home-bg">
+                <div class="bg-slide current" style="background-image: url('images/home-bg.jpeg');"></div>
+                <div class="bg-slide next" style="background-image: url('images/home-bg-2.jpg');"></div>
+            </div>
+
+            <!-- Foreground content -->
+            <div class="overlay-heading">
+                <h1>Our Services</h1>
+            </div>
+        </section>
+
+         <!--Footer Section-->
+        <footer>
+            <div class="foot">
+				<div class="col-1">
+                    <h3>FOLLOW US</h3>
+					<a href="https://web.facebook.com/www.boomerangdrivingschool.co.za/?_rdc=1&_rdr" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+					<a href="https://www.instagram.com/boomerangdriving/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+					<a href="https://www.youtube.com/channel/UC4EVTPKkMa8CBTqdhhl3GjA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <p><small>Boomerang Driving School &copy; Copyright 2025</small></p>
+				</div>
+					
+				<div class="col-2">
+					<h3>BOOK NOW</h3>
+					<form>
+						<input type="email" placeholder="Your Email Address" required>
+						<br>
+						<button type="submit">SUBMIT</button>
+					</form>
+				</div>
+					
+				<div class="col-3">
+                    <h3>LOCATION</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.536862992082!2d28.0031340752199!3d-26.094307377105303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9574974f3479f1%3A0xfd7e23090cd57fdf!2s163%20Bram%20Fischer%20Dr%2C%20Ferndale%2C%20Randburg%2C%202194!5e0!3m2!1sen!2sza!4v1720093566579!5m2!1sen!2sza"
+                        width="100%"
+                        height="300"
+                        style="border:0; border-radius: 8px;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+			</div>
+            <div class="dev"><p><small>Designed & Developed by: <a href="https://tinashe-andre.github.io/Portfolio-Site-V2/" target="_blank">T.Dre</a> :)</small></p></div>
+        </footer>
+
+        <!--Scripts-->    
+        <script src="scripts/hamburgerMenu.js"></script>
+        <script src="scripts/homeBackground.js"></script>
+    </body>
+</html>

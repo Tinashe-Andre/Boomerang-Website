@@ -1,0 +1,382 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  background: #f8f9fa;
+  color: #222;
+  position: relative;
+}
+
+:root{
+    --hero-link-color: #000;
+    --hero-link-hover-color: blue;
+}
+
+/*--Hero Section--*/
+
+/* Base Navigation Styles */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 12%;
+    background-color: #fff;
+    padding: 16px 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Logo */
+.top-nav img {
+    width: 140px;
+    height: auto;
+}
+
+/* Navigation Links */
+#nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+#nav-links a {
+    text-decoration: none;
+    color: var(--hero-link-color, #222);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 8px 14px;
+    transition: color 0.3s ease;
+}
+
+#nav-links a:hover {
+    color: var(--hero-link-hover-color, #007bff);
+}
+
+/* CTA (Book Now) */
+#nav-links .deco {
+    border: 2px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #007bff;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#nav-links .deco:hover {
+    background-color: #e0ecff;
+    color: #000;
+    border-color: #000;
+}
+
+/* Hamburger Icon (Mobile only) */
+.top-nav .icon {
+    display: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 975px) {
+    /* Structure shift for small screens */
+    .top-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 20px;
+    }
+
+    /* Hamburger visible */
+    .top-nav .icon {
+        display: block;
+    }
+
+    /* Hide links initially */
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 16px 0;
+        transition: max-height 0.3s ease;
+    }
+
+    /* Shown state */
+    #nav-links.responsive {
+        display: flex;
+    }
+
+    #nav-links a {
+        color: #222;
+        padding: 12px 20px;
+        border-bottom: 1px solid #eee;
+        font-size: 1rem;
+    }
+
+    #nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    /* Book Now button */
+    #nav-links .deco {
+        margin-top: 8px;
+        align-self: center;
+    }
+}
+
+/*--Home Section--*/
+.home {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 5%;
+  color: white;
+  z-index: 0;
+  margin-top: 0;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 60, 130, 0.5);
+    z-index: 0;
+}
+
+/* Layer that holds both background slides */
+.home-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Individual background slides */
+.bg-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Active slide is visible */
+.bg-slide.current {
+  opacity: 1;
+  z-index: 1;
+}
+
+.bg-slide.next {
+  z-index: 0;
+}
+
+
+/* Text container */
+.overlay-text {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 600px;
+}
+
+/* Heading */
+.overlay-heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.3;
+    margin-bottom: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+/* Text blocks */
+.home-cta {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    line-height: 1.5;
+    text-align: center;
+    padding: 12px 16px;
+    border-radius: 40px;
+    max-width: 100%;
+    background-color: #0a6bd3;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 60px;
+    font-weight: 600;
+}
+
+.home-cta:hover {
+  background-color: #fff;
+  color: #0a6bd3;
+  border: 2px solid #0a6bd3;
+  font-weight: 600;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .home {
+        justify-content: center;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .home-cta {
+        align-items: center;
+    }
+
+    .overlay-heading,
+    .home-cta {
+        text-align: center;
+    }
+}
+
+/*--Footer Section--*/
+footer {
+  color: azure;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container */
+.foot {
+  padding: 80px 10%;
+  background: rgb(45, 45, 218);
+  color: #efefef;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Columns */
+.foot > div {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+/* Icons */
+footer i {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+/* Section Titles */
+.foot div h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+}
+
+/* Links */
+.col-1 a {
+  display: block;
+  text-decoration: none;
+  color: #efefef;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.col-1 a:hover {
+  color: #cfd3ff;
+}
+
+/* Center column grows more */
+.col-2 {
+  flex-grow: 2;
+}
+
+/* Form */
+form input {
+  width: 100%;
+  max-width: 400px;
+  height: 45px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  outline: none;
+  border: none;
+}
+
+form button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+form button:hover {
+  background: #fff;
+  color: #2d2dda;
+}
+
+/* Footer Bottom Line */
+.dev {
+  background-color: rgb(45, 45, 218);
+  text-align: center;
+  padding: 16px 10px;
+  font-size: 1rem;
+}
+
+.dev a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.dev a:hover {
+  color: #cfd3ff;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .foot {
+    padding: 60px 5%;
+    gap: 24px;
+  }
+
+  .foot > div {
+    text-align: center;
+  }
+
+  form input {
+    max-width: 100%;
+  }
+
+  form button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .dev {
+    font-size: 0.9rem;
+  }
+}
+
+
