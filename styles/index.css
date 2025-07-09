@@ -1041,6 +1041,7 @@ form button:hover {
   height: 48px;
   border-radius: 50%;
   background: #007bff;
+  text-decoration: none;
   color: white;
   border: none;
   outline: none;

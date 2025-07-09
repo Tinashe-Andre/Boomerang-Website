@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <link rel="icon" href="images/boomerang-logo-icon-removebg.png">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     </head>
     <body>
         <!--Navigation Header-->
@@ -14,12 +15,12 @@
             <div class="top-nav">
                 <a href="index.html"><img src="images/boomerang-logo.png" alt="Logo"></a>
                 <div id="nav-links">
-                    <a href="index.html" onclick="closeMenu()">Home</a>
-                    <a href="about.html" onclick="closeMenu()">About Us</a>
-                    <a href="services.html" onclick="closeMenu()">Services</a>
-                    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
-                    <a href="contact.html" onclick="closeMenu()">Contact Us</a>
-                    <a href="https://wa.me/27792296578" target="_blank" class="deco" onclick="closeMenu()">Book Now</a>
+                    <a href="index.html" onclick="closeMenu()"  data-aos="fade-right" data-aos-delay="100">Home</a>
+                    <a href="about.html" onclick="closeMenu()"  data-aos="fade-right" data-aos-delay="200">About Us</a>
+                    <a href="services.html" onclick="closeMenu()"  data-aos="fade-right" data-aos-delay="300">Services</a>
+                    <a href="gallery.html" onclick="closeMenu()"  data-aos="fade-right" data-aos-delay="400">Gallery</a>
+                    <a href="contact.html" onclick="closeMenu()"  data-aos="fade-right" data-aos-delay="500">Contact Us</a>
+                    <a href="https://wa.me/27792296578" target="_blank" class="deco" onclick="closeMenu()"  data-aos="fade-right" data-aos-delay="600">Book Now</a>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
@@ -28,7 +29,7 @@
         </section>
 
         <!--Home Section-->
-        <section class="home">
+        <section class="home" data-aos="zoom-in" data-aos-duration="900" data-aos-easing="ease-in-out">
             <!-- Background transition layers -->
             <div class="home-bg">
                 <div class="bg-slide current" style="background-image: url('images/home-bg.jpeg');"></div>
@@ -45,7 +46,7 @@
         </section>
 
         <!--Process Section-->
-        <section class="process-section">
+        <section class="process-section" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-in-out">
             <span>OUR PROCESS</span>
             <h1>Simple Steps to Get Your<br>Driving License</h1>
             <div class="big-box">
@@ -68,7 +69,7 @@
         </section>
 
         <!--About Us Section-->
-        <section class="about-us">
+        <section class="about-us" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-in-out">
             <div class="content">
             <div class="container-1">
                 <div class="block-1"></div>
@@ -109,7 +110,7 @@
         </section>
 
         <!--Services Section-->
-        <section class="services">
+        <section class="services" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-in-out">
             <video
                 class="video-bg"
                 autoplay
@@ -126,58 +127,43 @@
             <div class="video-overlay"></div>
 
             <div class="services-content">
-  <span class="section-label">Services</span>
-  <h1 class="section-heading">What We Offer</h1>
-  <div class="main-content">
-    <div class="left-content">
-      <div class="service-item">
-        <i class="fa-solid fa-car-side"></i>
-        <h3>Learning Roads</h3>
-        <p>We include learning the rules of the road as part of your training.</p>
-      </div>
-      <div class="service-item">
-        <i class="fa-solid fa-car-crash"></i>
-        <h3>Ultimate Support</h3>
-        <p>We provide full support tailored to every learner’s needs.</p>
-      </div>
-      <div class="service-item">
-        <i class="fa-solid fa-id-card"></i>
-        <h3>Quick License</h3>
-        <p>Finish your training and qualify for a valid driving license quickly.</p>
-      </div>
-      <div class="service-item">
-        <i class="fa-solid fa-user-tie"></i>
-        <h3>Qualified Instructors</h3>
-        <p>Our experienced instructors are committed to your success.</p>
-      </div>
-    </div>
-    <div class="right-content">
-      <img src="images/services-img.jpg" alt="Services Image">
-      <a href="services.html" class="cta-button">Discover More</a>
-    </div>
-  </div>
-</div>
-
-<!-- Floating Buttons -->
-<div class="floating-buttons">
-  <!-- Scroll to Top -->
-  <button class="circle-btn" id="scrollTopBtn" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <!-- WhatsApp -->
-  <a href="https://wa.me/27792296578" class="circle-btn whatsapp-btn" title="Chat on WhatsApp" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-</div>
-
-
+                <span class="section-label">Services</span>
+                <h1 class="section-heading">What We Offer</h1>
+                <div class="main-content">
+                    <div class="left-content">
+                        <div class="service-item">
+                            <i class="fa-solid fa-car-side"></i>
+                            <h3>Learning Roads</h3>
+                            <p>We include learning the rules of the road as part of your training.</p>
+                        </div>
+                        <div class="service-item">
+                            <i class="fa-solid fa-car-crash"></i>
+                            <h3>Ultimate Support</h3>
+                            <p>We provide full support tailored to every learner’s needs.</p>
+                        </div>
+                        <div class="service-item">
+                            <i class="fa-solid fa-id-card"></i>
+                            <h3>Quick License</h3>
+                            <p>Finish your training and qualify for a valid driving license quickly.</p>
+                        </div>
+                        <div class="service-item">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <h3>Qualified Instructors</h3>
+                            <p>Our experienced instructors are committed to your success.</p>
+                        </div>
+                    </div>
+                    <div class="right-content">
+                        <img src="images/services-img.jpg" alt="Services Image">
+                        <a href="services.html" class="cta-button">Discover More</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!--Footer Section-->
-        <footer>
+        <footer data-aos="fade-right" data-aos-duration="900" data-aos-easing="ease-in-out">
             <div class="foot">
-				<div class="col-1">
+				<div class="col-1" data-aos="fade-right" data-aos-delay="100">
                     <h3>FOLLOW US</h3>
 					<a href="https://web.facebook.com/www.boomerangdrivingschool.co.za/?_rdc=1&_rdr" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
 					<a href="https://www.instagram.com/boomerangdriving/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -185,7 +171,7 @@
                     <p><small>Boomerang Driving School &copy; Copyright 2025</small></p>
 				</div>
 					
-				<div class="col-2">
+				<div class="col-2" data-aos="fade-right" data-aos-delay="100">
 					<h3>BOOK NOW</h3>
 					<form>
 						<input type="email" placeholder="Your Email Address" required>
@@ -194,7 +180,7 @@
 					</form>
 				</div>
 					
-				<div class="col-3">
+				<div class="col-3" data-aos="fade-right" data-aos-delay="100">
                     <h3>LOCATION</h3>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.536862992082!2d28.0031340752199!3d-26.094307377105303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9574974f3479f1%3A0xfd7e23090cd57fdf!2s163%20Bram%20Fischer%20Dr%2C%20Ferndale%2C%20Randburg%2C%202194!5e0!3m2!1sen!2sza!4v1720093566579!5m2!1sen!2sza"
@@ -210,23 +196,48 @@
             <div class="dev"><p><small>Designed & Developed by: <a href="https://tinashe-andre.github.io/Portfolio-Site-V2/" target="_blank">T.Dre</a> :)</small></p></div>
         </footer>
 
+        <!-- Floating Buttons -->
+        <div class="floating-buttons">
+            <!-- Scroll to Top -->
+            <button class="circle-btn" id="scrollTopBtn" title="Go to top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+
+             <!-- WhatsApp -->
+            <a href="https://wa.me/27792296578" class="circle-btn whatsapp-btn" title="Chat on WhatsApp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
         <!--Scripts-->    
         <script src="scripts/hamburgerMenu.js"></script>
         <script src="scripts/homeBackground.js"></script>
         <script src="scripts/servicesVideo.js"></script>
         <script src="scripts/floatingActionButton.js"></script>
+
         <script>
-  const items = document.querySelectorAll('.service-item');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
+            const items = document.querySelectorAll('.service-item');
+            const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                }
+             });
+            }, { threshold: 0.1 });
 
-  items.forEach(item => observer.observe(item));
-</script>
+            items.forEach(item => observer.observe(item));
+        </script>
 
+        <!--AOS Animations-->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 800, // animation duration in ms
+                easing: "ease-in-out", // easing function
+                once: true, // whether animation happens only once
+            });
+            });
+        </script>
     </body>
 </html>
