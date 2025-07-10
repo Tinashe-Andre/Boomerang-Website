@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="styles/about.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <link rel="icon" href="images/boomerang-logo-icon-removebg.png">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     </head>
     <body>
         <!--Navigation Header-->
@@ -14,12 +15,12 @@
             <div class="top-nav">
                 <a href="index.html"><img src="images/boomerang-logo.png" alt="Logo"></a>
                 <div id="nav-links">
-                    <a href="index.html" onclick="closeMenu()">Home</a>
-                    <a href="about.html" onclick="closeMenu()">About Us</a>
-                    <a href="services.html" onclick="closeMenu()">Services</a>
-                    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
-                    <a href="contact.html" onclick="closeMenu()">Contact Us</a>
-                    <a href="https://wa.me/27792296578" target="_blank" class="deco" onclick="closeMenu()">Book Now</a>
+                    <a href="index.html" onclick="closeMenu()"  data-aos="fade-right" data-aos-delay="100">Home</a>
+                    <a href="about.html" onclick="closeMenu()"  data-aos="fade-right" data-aos-delay="200">About Us</a>
+                    <a href="services.html" onclick="closeMenu()"  data-aos="fade-right" data-aos-delay="300">Services</a>
+                    <a href="gallery.html" onclick="closeMenu()"  data-aos="fade-right" data-aos-delay="400">Gallery</a>
+                    <a href="contact.html" onclick="closeMenu()"  data-aos="fade-right" data-aos-delay="500">Contact Us</a>
+                    <a href="https://wa.me/27792296578" target="_blank" class="deco" onclick="closeMenu()"  data-aos="fade-right" data-aos-delay="600">Book Now</a>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
@@ -28,152 +29,133 @@
         </section>
 
         <!--Home Section-->
-     <section class="home" id="about">
-  <div class="home-bg">
-    <div class="bg-slide current" style="background-image: url('images/about-bg.jpg');"></div>
-    <div class="bg-slide next" style="background-image: url('images/about-bg-2.jpg');"></div>
-  </div>
+        <section class="home" id="about" data-aos="zoom-in" data-aos-duration="900" data-aos-easing="ease-in-out">
+            <div class="home-bg">
+                <div class="bg-slide current" style="background-image: url('images/about-bg.jpg');"></div>
+                <div class="bg-slide next" style="background-image: url('images/about-bg-2.jpg');"></div>
+            </div>
 
-  <div class="overlay-heading">
-    <div class="overlay-text">
-      <h1>Driven by Excellence</h1>
-      <h2>About Boomerang Driving School</h2>
-      <a href="#info" class="overlay-btn">Learn More</a>
-    </div>
-  </div>
-</section>
-
+            <div class="overlay-heading">
+                <div class="overlay-text">
+                      <h1>Driven by Excellence</h1>
+                      <h2>About Boomerang Driving School</h2>
+                      <a href="#info" class="overlay-btn">Learn More</a>
+                </div>
+            </div>
+        </section>
 
         <!--Info Section-->
-        <section class="info-section" id="info">
-  <div class="container-2">
-    <div class="info-content">
-      <span class="heading">Welcome to Boomerang</span>
-      <h1 class="sub-heading">Schedule Your Driving Lessons with Us</h1>
-      <p class="desc">
-        Founded in 2007, Boomerang Driving School set out with a clear mission: to lead the way in high-quality driver education. We combine modern training techniques with a deep commitment to road safety, ensuring every student not only passes — but drives with confidence.
-      </p>
-      <p>
-        Our services are structured into three core areas:
-      </p>
-      <ul class="services-list">
-        <li><strong>Driver Theory:</strong> In-depth, up-to-date knowledge of road rules and safe driving practices.</li>
-        <li><strong>Practical Driver Training:</strong> Hands-on, real-world driving experience with patient, certified instructors.</li>
-        <li><strong>Driver Retraining:</strong> For experienced drivers seeking to refresh their skills or meet legal requirements.</li>
-      </ul>
-    </div>
+        <section class="info-section" id="info" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-in-out">
+            <div class="container-2">
+                <div class="info-content">
+                    <span class="heading">Welcome to Boomerang</span>
+                    <h1 class="sub-heading">Schedule Your Driving Lessons with Us</h1>
+                    <p class="desc">
+                        Founded in 2007, Boomerang Driving School set out with a clear mission: to lead the way in high-quality driver education. We combine modern training techniques with a deep commitment to road safety, ensuring every student not only passes — but drives with confidence.
+                    </p>
+                    <p>
+                        Our services are structured into three core areas:
+                    </p>
+                    <ul class="services-list">
+                        <li><strong>Driver Theory:</strong> In-depth, up-to-date knowledge of road rules and safe driving practices.</li>
+                        <li><strong>Practical Driver Training:</strong> Hands-on, real-world driving experience with patient, certified instructors.</li>
+                        <li><strong>Driver Retraining:</strong> For experienced drivers seeking to refresh their skills or meet legal requirements.</li>
+                    </ul>
+                </div>
 
-    <div class="founder-block">
-      <div class="founder-img-wrapper">
-        <img src="images/founder.jpg" alt="Tinashe Dre - Founder">
-      </div>
-      <div class="founder-info">
-        <h3 class="founder-heading">Meet Our Founder</h3>
-        <p class="founder-name"><strong>Norman Makwiramiti</strong>, Founder & Lead Instructor</p>
-        <p>
-          With over 15 years in the industry, Mr Makwiramiti brings unmatched experience and dedication to driver education. His vision? A safer, smarter generation of drivers.
-        </p>
-        <p>
-          From humble beginnings to a respected name in the field, Norman has shaped Boomerang into more than a driving school — it's a movement toward responsibility on the road.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="founder-block">
+                    <div class="founder-img-wrapper">
+                        <img src="images/founder.jpg" alt="Tinashe Dre - Founder">
+                    </div>
+                    <div class="founder-info">
+                        <h3 class="founder-heading">Meet Our Founder</h3>
+                        <p class="founder-name"><strong>Norman Makwiramiti</strong>, Founder & Lead Instructor</p>
+                        <p>
+                            With over 15 years in the industry, Mr Makwiramiti brings unmatched experience and dedication to driver education. His vision? A safer, smarter generation of drivers.
+                        </p>
+                        <p>
+                            From humble beginnings to a respected name in the field, Norman has shaped Boomerang into more than a driving school — it's a movement toward responsibility on the road.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
        <!--Why Us Section-->
-<section class="why-us-section">
-  <div class="why-us-overlay"></div>
+      <section class="why-us-section" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-in-out">
+          <div class="why-us-overlay"></div>
 
-  <div class="why-us-content">
-    <div class="left">
-      <img src="images/why-us.jpg" alt="Why Choose Us">
-    </div>
-    <div class="right">
-      <h2>Why choose Boomerang Driving School?</h2>
-      <p>Choosing a driving school isn’t just about passing your test — it’s about learning the skills to drive for life. Here’s why Boomerang is the smart choice:</p>
-      <ul>
-        <ul>
-  <li><i class="fas fa-car icon"></i> A trusted name with over 15 years of industry experience</li>
-  <li><i class="fas fa-chalkboard-teacher icon"></i> Patient, certified instructors using modern, safe vehicles</li>
-  <li><i class="fas fa-shield-alt icon"></i> Safety-first approach in everything we teach</li>
-  <li><i class="fas fa-flag-checkered icon"></i> You've tried the rest — now drive with the best</li>
-</ul>
+          <div class="why-us-content">
+              <div class="left">
+                  <img src="images/why-us.jpg" alt="Why Choose Us">
+              </div>
+              <div class="right">
+                  <h2>Why choose Boomerang Driving School?</h2>
+                  <p>Choosing a driving school isn’t just about passing your test — it’s about learning the skills to drive for life. Here’s why Boomerang is the smart choice:</p>
+                  <ul>
+                      <li><i class="fas fa-car icon"></i> A trusted name with over 15 years of industry experience</li>
+                      <li><i class="fas fa-chalkboard-teacher icon"></i> Patient, certified instructors using modern, safe vehicles</li>
+                      <li><i class="fas fa-shield-alt icon"></i> Safety-first approach in everything we teach</li>
+                      <li><i class="fas fa-flag-checkered icon"></i> You've tried the rest — now drive with the best</li>
+                  </ul>
 
-      <p class="closing">When you want more than just a license — you want Boomerang.</p>
-    </div>
-  </div>
-</section>
+                  <p class="closing">When you want more than just a license — you want Boomerang.</p>
+              </div>
+          </div>
+      </section>
 
-<!--Experience Section-->
-<section class="experience-section">
-  <span>Learn Today</span>
-  <h1>Get Real World Driving Experience</h1>
+      <!--Experience Section-->
+      <section class="experience-section" id="experience" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-in-out">
+          <span>Learn Today</span>
+          <h1>Get Real World Driving Experience</h1>
 
-  <div class="experience-content">
-   <div class="images">
-  <div class="img-wrapper img-1"><img src="images/exp-img.jpg" alt="Driving Experience 1"></div>
-  <div class="img-wrapper img-2"><img src="images/exp-img-2.jpg" alt="Driving Experience 2"></div>
-  <div class="img-wrapper img-3"><img src="images/exp-img-3.jpg" alt="Driving Experience 3"></div>
-  <div class="img-wrapper img-4"><img src="images/exp-img-4.jpg" alt="Driving Experience 4"></div>
-</div>
+          <div class="experience-content">
+              <div class="images">
+                  <div class="img-wrapper img-1"><img src="images/exp-img.jpg" alt="Driving Experience 1"></div>
+                  <div class="img-wrapper img-2"><img src="images/exp-img-2.jpg" alt="Driving Experience 2"></div>
+                  <div class="img-wrapper img-3"><img src="images/exp-img-3.jpg" alt="Driving Experience 3"></div>
+                  <div class="img-wrapper img-4"><img src="images/exp-img-4.jpg" alt="Driving Experience 4"></div>
+              </div>
+              <div class="stats">
+                  <div class="col">
+                      <h3>10+</h3>
+                      <h4>Years of Experience</h4>
+                  </div>
+                  <div class="col">
+                      <h3>100+</h3>
+                      <h4>Tests Passed</h4>
+                  </div>
+                  <div class="col">
+                      <h3>98%</h3>
+                      <h4>Client Satisfaction</h4>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-
-    <div class="stats">
-      <div class="col">
-        <h3>10+</h3>
-        <h4>Years of Experience</h4>
-      </div>
-      <div class="col">
-        <h3>100+</h3>
-        <h4>Tests Passed</h4>
-      </div>
-      <div class="col">
-        <h3>98%</h3>
-        <h4>Client Satisfaction</h4>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Floating Buttons -->
-<div class="floating-buttons">
-  <!-- Scroll to Top -->
-  <button class="circle-btn" id="scrollTopBtn" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <!-- WhatsApp -->
-  <a href="https://wa.me/27792296578" class="circle-btn whatsapp-btn" title="Chat on WhatsApp" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-</div>
-
-
-
-         <!--Footer Section-->
-        <footer>
-            <div class="foot">
-				<div class="col-1">
-                    <h3>FOLLOW US</h3>
-					<a href="https://web.facebook.com/www.boomerangdrivingschool.co.za/?_rdc=1&_rdr" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-					<a href="https://www.instagram.com/boomerangdriving/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-					<a href="https://www.youtube.com/channel/UC4EVTPKkMa8CBTqdhhl3GjA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                    <p><small>Boomerang Driving School &copy; Copyright 2025</small></p>
-				</div>
+      <!--Footer Section-->
+      <footer data-aos="fade-right" data-aos-duration="900" data-aos-easing="ease-in-out">
+          <div class="foot">
+				      <div class="col-1" data-aos="fade-right" data-aos-delay="100">
+                  <h3>FOLLOW US</h3>
+					        <a href="https://web.facebook.com/www.boomerangdrivingschool.co.za/?_rdc=1&_rdr" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+					        <a href="https://www.instagram.com/boomerangdriving/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+					        <a href="https://www.youtube.com/channel/UC4EVTPKkMa8CBTqdhhl3GjA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                  <p><small>Boomerang Driving School &copy; Copyright 2025</small></p>
+				      </div>
 					
-				<div class="col-2">
-					<h3>BOOK NOW</h3>
-					<form>
-						<input type="email" placeholder="Your Email Address" required>
-						<br>
-						<button type="submit">SUBMIT</button>
-					</form>
-				</div>
+				      <div class="col-2" data-aos="fade-right" data-aos-delay="100">
+					        <h3>BOOK NOW</h3>
+					        <form>
+						          <input type="email" placeholder="Your Email Address" required>
+						          <br>
+						          <button type="submit">SUBMIT</button>
+					        </form>
+				      </div>
 					
-				<div class="col-3">
-                    <h3>LOCATION</h3>
-                    <iframe
+				      <div class="col-3" data-aos="fade-right" data-aos-delay="100">
+                  <h3>LOCATION</h3>
+                  <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.536862992082!2d28.0031340752199!3d-26.094307377105303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9574974f3479f1%3A0xfd7e23090cd57fdf!2s163%20Bram%20Fischer%20Dr%2C%20Ferndale%2C%20Randburg%2C%202194!5e0!3m2!1sen!2sza!4v1720093566579!5m2!1sen!2sza"
                         width="100%"
                         height="300"
@@ -181,15 +163,40 @@
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-			</div>
-            <div class="dev"><p><small>Designed & Developed by: <a href="https://tinashe-andre.github.io/Portfolio-Site-V2/" target="_blank">T.Dre</a> :)</small></p></div>
-        </footer>
+                  </iframe>
+              </div>
+			    </div>
+          <div class="dev"><p><small>Designed & Developed by: <a href="https://tinashe-andre.github.io/Portfolio-Site-V2/" target="_blank">T.Dre</a> :)</small></p></div>
+      </footer>
+
+      <!-- Floating Buttons -->
+      <div class="floating-buttons">
+          <!-- Scroll to Top -->
+          <button class="circle-btn" id="scrollTopBtn" title="Go to top">
+              <i class="fas fa-arrow-up"></i>
+          </button>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/27792296578" class="circle-btn whatsapp-btn" title="Chat on WhatsApp" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+          </a>
+      </div>
 
         <!--Scripts-->    
         <script src="scripts/hamburgerMenu.js"></script>
         <script src="scripts/aboutBackground.js"></script>
         <script src="scripts/floatingActionButton.js"></script>
+
+        <!--AOS Animations-->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 800, // animation duration in ms
+                easing: "ease-in-out", // easing function
+                once: true, // whether animation happens only once
+            });
+            });
+        </script>
     </body>
 </html>

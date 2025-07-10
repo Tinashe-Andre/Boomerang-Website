@@ -193,9 +193,8 @@ html, body {
 
 .gallery-section {
   padding: 60px 5%;
-  background-color: #cadee4;
+  background-color: #dae7ec;
   text-align: center;
-  
 }
 
 .gallery-section span {
@@ -216,7 +215,6 @@ html, body {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 40px;
 }
-
 
 /* Masonry style gallery */
 .masonry-gallery {
@@ -469,6 +467,7 @@ form button:hover {
   border-radius: 50%;
   background: #007bff;
   color: white;
+  text-decoration: none;
   border: none;
   outline: none;
   cursor: pointer;
