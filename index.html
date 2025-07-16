@@ -10,6 +10,51 @@
         <link rel="icon" href="images/boomerang-logo-icon-removebg.png">
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
         <link rel="canonical" href="https://boomerangdrivingschool.co.za/" />
+        <!--
+            Structured data in JSON-LD format to help search engines understand
+            that this website represents Boomerang Driving School, a driving
+            school located in Randburg, Gauteng, South Africa. Includes business
+            details such as address, contact number, service area, opening hours,
+            pricing range, and social media profiles. This enables enhanced
+            search results like rich snippets.
+        -->
+         <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "DrivingSchool",
+            "name": "Boomerang Driving School",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Randburg",
+                "addressRegion": "Gauteng",
+                "addressCountry": "ZA"
+            },
+            "url": "https://boomerangdrivingschool.co.za",
+            "telephone": "+27792296578",
+            "areaServed": "Randburg, Johannesburg",
+            "priceRange": "Affordable",
+            "openingHours": "Mo-Sa 08:00-18:00",
+            "sameAs": [
+                "https://www.facebook.com/boomerangdrivingschool",
+                "https://www.instagram.com/boomerangdriving/",
+                "https://www.youtube.com/channel/UC4EVTPKkMa8CBTqdhhl3GjA"
+            ]
+            }
+        </script>
+
+        <!-- VideoObject structured data -->
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "About Us - Boomerang Driving School",
+            "description": "Learn about Boomerang Driving School and our services.",
+            "thumbnailUrl": "https://boomerangdrivingschool.co.za/images/boomerang-logo-icon-removebg.png",
+            "uploadDate": "2025-07-16",
+            "contentUrl": "https://boomerangdrivingschool.co.za/videos/about-us.mp4",
+            "embedUrl": "https://boomerangdrivingschool.co.za/videos/about-us.mp4"
+            }
+        </script>
     </head>
     <body>
         <!--Navigation Header-->
@@ -240,36 +285,6 @@
                 once: true, // whether animation happens only once
             });
             });
-        </script>
-        <!--
-            Structured data in JSON-LD format to help search engines understand
-            that this website represents Boomerang Driving School, a driving
-            school located in Randburg, Gauteng, South Africa. Includes business
-            details such as address, contact number, service area, opening hours,
-            pricing range, and social media profiles. This enables enhanced
-            search results like rich snippets.
-        -->
-        <script type="application/ld+json">
-            {"@context": "https://schema.org",
-            "@type": "DrivingSchool",
-            "name": "Boomerang Driving School",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Randburg",
-                "addressRegion": "Gauteng",
-                "addressCountry": "ZA"
-            },
-            "url": "https://boomerangdrivingschool.co.za",
-            "telephone": "+27792296578",
-            "areaServed": "Randburg, Johannesburg",
-            "priceRange": "Affordable",
-            "openingHours": "Mo-Sa 08:00-18:00",
-            "sameAs": [
-                "https://www.facebook.com/boomerangdrivingschool",
-                "https://www.instagram.com/boomerangdriving/",
-                "https://www.youtube.com/channel/UC4EVTPKkMa8CBTqdhhl3GjA"
-            ]
-            }
         </script>
     </body>
 </html>
